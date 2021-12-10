@@ -1,0 +1,16 @@
+<div class="container mt-4">
+<span *ngIf="arrayDesordenado">Ordenando um vetor com metodo Sort(): <strong>[{{arrayDesordenado}}]</strong> </span>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Numero Decimal</th>
+        <th scope="col">Numero Escrito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let orde of arrayOrdenado;">
+        <td scope="row">{{orde.vlr}}</td>
+        <td>({{orde.nuString}})</td>
+    </tbody>
+  </table>
+</div>

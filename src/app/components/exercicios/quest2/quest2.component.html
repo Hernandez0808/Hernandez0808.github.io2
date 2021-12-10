@@ -1,0 +1,40 @@
+<span><strong>Calculadora com passagem de parametro</strong> </span>
+<div class="row mt-4">
+    <div class="col">
+        <div class="form-group">
+            <label for="n1">Valor 1</label>
+            <input [(ngModel)]="vl1" class="form-control" type="number" id="n1" placeholder="Valor 1">
+        </div>
+
+    </div>
+    <div class="col-1">
+        <div class="form-group">
+            <select [(ngModel)]="operador" class="mt-4 form-select h5" id="operador" name="operadores">
+                <option value="+" selected>+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-lg">
+
+        <div class="form-group">
+            <label for="n2">Valor 2</label>
+            <div class="input-group">
+                <input [(ngModel)]="vl2" class="form-control" type="number" id="n2" placeholder="Valor 2">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="form-group ">
+            <label for="result">Resultado</label>
+        </div>
+        <span *ngIf="result != null" id="result">{{result}}</span>
+    </div>
+    <div>
+    <button id="button-addon2" class="mt-4 btn btn-outline-primary"
+    (click)="calcular()">Calcular</button>
+    </div>
+</div>
